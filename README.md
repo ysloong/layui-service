@@ -12,7 +12,13 @@
 </dependency>
 ~~~
 
+#### @Select 注解
 
+~~~java
+@Select("select product.*,product_category.name category_name from product,product_category " +
+            "  WHERE product.category_one_id = product_category.id;")
+    List<ProductDetailVo> findProductDetailList();
+~~~
 
 
 
