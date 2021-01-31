@@ -4,9 +4,11 @@ import com.hasika.cloud.layui.service.entity.Product;
 import com.hasika.cloud.layui.service.mapper.ProductMapper;
 import com.hasika.cloud.layui.service.service.ProductService;
 import com.hasika.cloud.layui.service.vo.DataVo;
+import com.hasika.cloud.layui.service.vo.ProductDetailVo;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * @author long
@@ -34,5 +36,15 @@ public class ProductServiceImpl implements ProductService {
         dataVo.setData(productMapper.selectList(null));
 
         return dataVo;
+    }
+
+    /**
+     * 查询列表详情
+     *
+     * @return 详情
+     */
+    @Override
+    public List<ProductDetailVo> findProductDetailList() {
+        return null;
     }
 }

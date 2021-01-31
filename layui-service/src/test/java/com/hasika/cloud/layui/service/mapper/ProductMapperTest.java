@@ -1,7 +1,6 @@
 package com.hasika.cloud.layui.service.mapper;
 
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import javax.annotation.Resource;
@@ -20,5 +19,10 @@ class ProductMapperTest {
     @Test
     void test() {
         productMapper.selectList(null).forEach(System.out::println);
+    }
+
+    @Test
+    void findProductDetailList() {
+        productMapper.findProductDetailList().forEach(System.out::println);
     }
 }
